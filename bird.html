@@ -7,11 +7,43 @@
 	<title>Bird Watching</title>
 	<script src="bird.js"></script>
 	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+    		color: #1e2321;
+  			background-image: url('img_hawk.jpg');
+  			background-repeat: no-repeat;
+  			background-attachment: fixed;
+  			background-size: 100%;
+		}
+		input, select{
+			background-color: #434d3f;
+    		color: #ede7e3;
+    		padding: 0.9em 1.2em;
+    		margin: 0.5em 0;
+    		border: 1px solid #ccd2ce;
+    		border-radius: 2%;
+    		cursor: pointer;
+    		width: fit-content;
+
+		}
 		table,
 		th,
-		td {
-			border: 1px solid black;
+		td,
+		tr {
+			font-family: Arial, Helvetica, sans-serif;
+    		font-size: 0.95em;
+    		margin: none;
+    		border: 1px solid #ccd2ce;
+			border-collapse: collapse;
+    		text-align: left;
+    		padding: 0.6em 1em;
+    		width: fit-content;
+			background-color: #f0f3f1;
+			color: #1e2321;
 		}
+		tr:nth-child(even) {
+    		background-color: #83877c;
+ 		}
 	</style>
 
 </head>
@@ -19,7 +51,7 @@
 <body onload="fetchBird();">
 	<h2>Bird Observation Records</h2>
 	<select id="birdName" type="text" placeholder="name for the bird">
-		<input id="dateTime" type="text" placeholder="date and time">
+		<input id="dateTime" type="datetime-local" placeholder="date and time">
 		<input id="location" type="text" placeholder="location">
 		<input id="email" type="text" placeholder="your email address">
 		<input type="button" value="Add to database" onclick="add();">

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Bird Watching</title>
+	<script src="bird.js"></script>
+	<style>
+		table,
+		th,
+		td {
+			border: 1px solid black;
+		}
+	</style>
+
+</head>
+
+<body onload="fetchBird();">
+	<h2>Bird Observation Records</h2>
+	<select id="birdName" type="text" placeholder="name for the bird">
+		<input id="dateTime" type="text" placeholder="date and time">
+		<input id="location" type="text" placeholder="location">
+		<input id="email" type="text" placeholder="your email address">
+		<input type="button" value="Add to database" onclick="add();">
+		<input type="button" value="Show List" onclick="fetchObservationList();">
+		<div id="observationTable"></div>
+</body>
+
+</html>

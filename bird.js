@@ -8,7 +8,7 @@ function fetchBird() {
 
 		body: JSON.stringify({
 			query: `query{
-						allBirds{
+						allBirds(orderBy: ENGLISH_ASC){
 							nodes{
 								english
 							}
